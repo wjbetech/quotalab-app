@@ -10,13 +10,14 @@ const meta = {
     },
     tags: ["autodocs"],
     args: {
-        label: "Button",
         onClick: () => {
             alert("Button clicked!")
         },
+        label: "Button",
     },
     argTypes: {
         backgroundColor: { control: "color" },
+        color: { control: "color" },
     },
 } satisfies Meta<typeof Button>;
 
@@ -34,6 +35,7 @@ export const Control: Story = {
 
 export const Primary: Story = {
     args: {
+        label: "Button",
         size: "medium",
         variant: "primary",
         loading: false,
@@ -43,6 +45,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
     args: {
+        label: "Button",
         size: "medium",
         variant: "secondary",
         loading: false,
@@ -52,15 +55,17 @@ export const Secondary: Story = {
 
 export const Danger: Story = {
     args: {
+        label: "Button",
         size: "medium",
         variant: "danger",
         loading: false,
-        backgroundColor: "#b32d2e"
+        backgroundColor: "#d63638"
     }
 }
 
 export const Ghost: Story = {
     args: {
+        label: "Button",
         size: "medium",
         variant: "ghost",
         loading: false,
