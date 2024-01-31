@@ -26,13 +26,46 @@ type Story = StoryObj<typeof meta>;
 
 export const Control: Story = {
     args: {
-        primary: true,
-        size: "medium"
+        size: "medium",
+        loading: false,
+        backgroundColor: "#4f94d4",
     }
 }
 
 export const Primary: Story = {
     args: {
-        size: "medium"
+        size: "medium",
+        variant: "primary",
+        loading: false,
+        backgroundColor: "#4f9fd4"
+    }
+}
+
+export const Secondary: Story = {
+    args: {
+        size: "medium",
+        variant: "secondary",
+        loading: false,
+        backgroundColor: "#008a20"
+    }
+}
+
+export const Danger: Story = {
+    args: {
+        size: "medium",
+        variant: "danger",
+        loading: false,
+        backgroundColor: "#b32d2e"
+    }
+}
+
+export const Ghost: Story = {
+    args: {
+        size: "medium",
+        variant: "ghost",
+        loading: false,
+        backgroundColor: "#f6f7f7",
+        color: "#101517",
+        border: "1px solid #101517"
     }
 }
