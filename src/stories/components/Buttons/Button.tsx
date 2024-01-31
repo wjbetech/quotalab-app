@@ -2,34 +2,38 @@
 
 import React from 'react'
 import { vars } from "@quotalab/qds-token"
-import { Flex, Input, Popover, Radio } from "@quotalab/qds"
+import { Button as _Button } from "@quotalab/qds"
 import { css } from "@emotion/css"
-import { Icon } from '@quotalab/icons'
 
 interface ButtonProps {
     primary?: boolean;
     label?: string;
     size?: "small" | "medium" | "large";
+    onClick?: () => void;
+    backgroundColor?: string;
 }
 
 export const Button = ({
     primary = false,
     label,
-    size,gi
+    size,
+    backgroundColor,
+    onClick,
     ...props
   }: ButtonProps) => {
-    const mode = primary? "storybook-button--primary" : "storybook-button--secondary";
     return (
-      <button
+      <_Button
         type="button"
-        className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+        className={css`
+          width: 100px;
+          border-radius: 24px;
+          padding: 10px;
+          font-size: ${vars.fontSize.bodyLarge};
+          background-color: ${vars.color.scaleGreen300};
+        `}
         {...props}
       >
         {label}
-        {/* define background-color and color CSS */}
-        <style jsx>{`
-
-        `}</style>
-      </button>
+      </_Button>
     );
   };

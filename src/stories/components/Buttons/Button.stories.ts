@@ -11,7 +11,13 @@ const meta = {
     tags: ["autodocs"],
     args: {
         label: "Button",
-    }
+        onClick: () => {
+            alert("Button clicked!")
+        },
+    },
+    argTypes: {
+        backgroundColor: { control: "color" },
+    },
 } satisfies Meta<typeof Button>;
 
 export default meta;
